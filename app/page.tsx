@@ -85,16 +85,16 @@ export default function Home() {
       {/* HEADER */}
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur shadow-lg" : "bg-transparent"}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 sm:h-20">
-          <Link href="/" className="flex items-center gap-2">
-            <img src="/logo.png" alt="Ragavendra Developers" className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg object-contain" />
-            <div>
-              <div className={`font-bold text-sm sm:text-lg leading-tight tracking-tight ${scrolled ? "text-gray-900" : "text-white"}`} style={{ fontFamily: "'Playfair Display', serif" }}>Ragavendra</div>
-              <div className={`text-[10px] sm:text-xs tracking-[0.2em] uppercase ${scrolled ? "text-amber-600" : "text-amber-300"}`}>Developers</div>
+          <Link href="/" className="flex items-center gap-3">
+            <img src="/header.png" alt="Ragavendra Developers" className="h-12 sm:h-14 object-contain" />
+            <div className="leading-tight">
+              <div className={`text-sm sm:text-lg font-bold tracking-tight ${scrolled ? "text-gray-900" : "text-white"}`} style={{ fontFamily: "'Playfair Display', serif" }}>Shree Ragavendra</div>
+              <div className={`text-[10px] sm:text-xs tracking-[0.2em] uppercase font-semibold ${scrolled ? "text-amber-600" : "text-amber-400"}`}>Developers</div>
             </div>
           </Link>
           <nav className="hidden md:flex items-center gap-8">
             {[["Home", "/"], ["Projects", "/projects"], ["About", "/about"], ["Contact", "/contact"]].map(([label, href]) => (
-              <Link key={label} href={href} className={`text-sm font-medium tracking-wide hover:text-amber-500 transition ${scrolled ? "text-gray-700" : "text-white/90"}`}>{label}</Link>
+              <Link key={label} href={href} className={`text-sm font-medium tracking-wide hover:text-amber-500 transition ${scrolled ? "text-gray-700" : "text-white"}`}>{label}</Link>
             ))}
             <Link href="/contact" className="bg-amber-500 hover:bg-amber-600 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition shadow-lg shadow-amber-500/25">Book Site Visit</Link>
           </nav>
