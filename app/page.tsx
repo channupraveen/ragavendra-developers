@@ -86,7 +86,7 @@ export default function Home() {
       <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? "bg-white/95 backdrop-blur shadow-lg" : "bg-transparent"}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16 sm:h-20">
           <Link href="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-gradient-to-br from-amber-500 to-amber-700 rounded-lg flex items-center justify-center text-white font-bold text-sm sm:text-lg">R</div>
+            <img src="/logo.png" alt="Ragavendra Developers" className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg object-contain" />
             <div>
               <div className={`font-bold text-sm sm:text-lg leading-tight tracking-tight ${scrolled ? "text-gray-900" : "text-white"}`} style={{ fontFamily: "'Playfair Display', serif" }}>Ragavendra</div>
               <div className={`text-[10px] sm:text-xs tracking-[0.2em] uppercase ${scrolled ? "text-amber-600" : "text-amber-300"}`}>Developers</div>
@@ -121,7 +121,7 @@ export default function Home() {
       {/* HERO */}
       <section className="relative h-[100vh] min-h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80')" }} />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/55 to-black/80" />
         <div className="relative z-10 text-center px-4 max-w-4xl">
           <div className="inline-block mb-4 sm:mb-6 px-4 py-1.5 border border-amber-400/50 rounded-full">
             <span className="text-amber-300 text-xs sm:text-sm tracking-[0.15em] uppercase font-medium">Premium Living in Hyderabad</span>
@@ -314,7 +314,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto grid sm:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-10 sm:mb-12">
           <div>
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-amber-500 to-amber-700 rounded-lg flex items-center justify-center text-white font-bold text-lg">R</div>
+              <img src="/logo.png" alt="Ragavendra Developers" className="w-10 h-10 rounded-lg object-contain" />
               <div>
                 <div className="font-bold text-lg" style={{ fontFamily: "'Playfair Display', serif" }}>Ragavendra</div>
                 <div className="text-amber-400 text-xs tracking-[0.2em] uppercase">Developers</div>
