@@ -4,14 +4,24 @@ import Link from "next/link";
 
 const projects = [
   {
-    id: "sri-sai-residency",
-    name: "Sri Sai Residency",
+    id: "mrr-nilayam",
+    name: "Malkaji Ratna Raghavendra Nilayam",
     location: "Medchal, Hyderabad",
     price: "₹45L – ₹72L",
     type: "2 & 3 BHK Apartments",
+    status: "Completed",
+    img: "/images/projects/MRR-Nilayam/mrr-nilayam(1).jpeg",
+    amenities: ["Parking", "Children's Play Area", "24/7 Security", "Power Backup"],
+  },
+  {
+    id: "g-2-independent-house",
+    name: "G+2 Independent House",
+    location: "Medchal, Hyderabad",
+    price: "₹1.6Cr",
+    type: "Commercial slot & 2 BHK Apartments",
     status: "Ongoing",
-    img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80",
-    amenities: ["Swimming Pool", "Gym", "Children's Play Area", "24/7 Security"],
+    img: "/images/projects/G+2-independent-House/G+2(4).jpeg",
+    amenities: ["Parking", "Rain Water Harvesting", "Children's Play Area", "Landscaped Gardens"],
   },
   {
     id: "lakshmi-gardens",
@@ -23,20 +33,10 @@ const projects = [
     img: "https://images.unsplash.com/photo-1515263487990-61b07816b324?w=800&q=80",
     amenities: ["Clubhouse", "Jogging Track", "Power Backup", "Landscaped Gardens"],
   },
-  {
-    id: "golden-heights",
-    name: "Golden Heights",
-    location: "Secunderabad, Hyderabad",
-    price: "₹38L – ₹65L",
-    type: "2 & 3 BHK Apartments",
-    status: "Completed",
-    img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80",
-    amenities: ["Parking", "Gym", "Community Hall", "Rain Water Harvesting"],
-  },
 ];
 
 const testimonials = [
-  { name: "Rajesh Kumar", text: "Excellent quality construction and timely delivery. Very happy with our new home at Sri Sai Residency!", rating: 5 },
+  { name: "Rajesh Kumar", text: "Excellent quality construction and timely delivery. Very happy with our new home!", rating: 5 },
   { name: "Priya Sharma", text: "The team was very professional and transparent throughout the process. Highly recommend Ragavendra Developers.", rating: 5 },
   { name: "Suresh Reddy", text: "Best value apartments in Medchal area. Great amenities and superb location near ORR.", rating: 4 },
 ];

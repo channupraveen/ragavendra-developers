@@ -1,0 +1,10 @@
+      {/* Main Image */}
+      <section className="relative">
+        <div className="w-full bg-gray-100" style={{ height: "70vh" }}>
+          <img
+            src={project.images[activeImg]}
+            alt={project.name}
+            className="w-full h-full object-cover transition-all duration-500"
+            style={{ objectPosition: "center 35%" }}
+          />
+        </div>
