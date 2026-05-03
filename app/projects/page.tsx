@@ -3,10 +3,11 @@ import { useState } from "react";
 import Link from "next/link";
 
 const allProjects = [
-  { id: "sri-sai-residency", name: "Sri Sai Residency", location: "Medchal, Hyderabad", price: "₹45L – ₹72L", type: "2 & 3 BHK", status: "Ongoing", img: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80", amenities: ["Swimming Pool", "Gym", "Children's Play Area", "24/7 Security", "Clubhouse", "Power Backup"] },
+  { id: "sri-sai-residency", name: "Sri Sai Residency", location: "Medchal, Hyderabad", price: "₹45L – ₹72L", type: "2 & 3 BHK", status: "Ongoing", img: "/images/projects/sri-sai-residency/sri-sai-residency(1).jpeg", amenities: ["Swimming Pool", "Gym", "Children's Play Area", "24/7 Security", "Clubhouse", "Power Backup"] },
   { id: "lakshmi-gardens", name: "Lakshmi Gardens", location: "Kompally, Hyderabad", price: "₹55L – ₹95L", type: "2, 3 & 4 BHK", status: "Ongoing", img: "https://images.unsplash.com/photo-1515263487990-61b07816b324?w=800&q=80", amenities: ["Clubhouse", "Jogging Track", "Power Backup", "Landscaped Gardens", "Indoor Games", "Multipurpose Hall"] },
   { id: "golden-heights", name: "Golden Heights", location: "Secunderabad, Hyderabad", price: "₹38L – ₹65L", type: "2 & 3 BHK", status: "Completed", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80", amenities: ["Parking", "Gym", "Community Hall", "Rain Water Harvesting", "CCTV", "Intercom"] },
   { id: "sunrise-towers", name: "Sunrise Towers", location: "Medchal, Hyderabad", price: "₹60L – ₹1.1Cr", type: "3 & 4 BHK", status: "Upcoming", img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80", amenities: ["Rooftop Pool", "Co-working Space", "EV Charging", "Smart Home", "Amphitheatre", "Yoga Deck"] },
+  { id: "g-2-independent-house", name: "G+2 Independent House", location: "Medchal, Hyderabad", price: "₹1.6Cr", type: "Commercial slot & 2 BHK Apartments", status: "Ongoing", img: "/images/projects/G+2-independent-House/G+2(4).jpeg", amenities: ["Parking", "Rain Water Harvesting","Children's Play Area", "Landscaped Gardens", "Fire Safety"] },
 ];
 
 const tabs = ["All", "Ongoing", "Completed", "Upcoming"];
@@ -39,8 +40,8 @@ export default function ProjectsPage() {
         <div className="grid md:grid-cols-2 gap-6 sm:gap-8 pb-16 sm:pb-24">
           {filtered.map(p => (
             <Link key={p.id} href={`/projects/${p.id}`} className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl hover:-translate-y-1 transition-all duration-500">
-              <div className="relative h-52 sm:h-72 overflow-hidden">
-                <img src={p.img} alt={p.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div className="relative h-52 sm:h-72 overflow-hidden bg-gray-100">
+                <img src={p.img} alt={p.name} className="w-full h-full object-contain object-center group-hover:scale-105 transition-transform duration-700" />
                 <div className="absolute top-3 left-3"><span className={`px-3 py-1 rounded-full text-xs font-bold text-white ${p.status === "Ongoing" ? "bg-green-500" : p.status === "Completed" ? "bg-blue-500" : "bg-orange-500"}`}>{p.status}</span></div>
               </div>
               <div className="p-5 sm:p-7">

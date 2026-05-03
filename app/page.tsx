@@ -336,7 +336,7 @@ export default function Home() {
               <p>Medchal, Hyderabad</p>
               <p>Telangana 501401</p>
               <p>+91 98765 43210</p>
-              <p>info@ragavendradevelopers.com</p>
+              <p>shreeraghavendradevelopers001@gmail.com</p>
             </div>
           </div>
           <div>

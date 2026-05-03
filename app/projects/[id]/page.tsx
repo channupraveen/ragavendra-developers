@@ -3,44 +3,69 @@ import { useState } from "react";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 
-const projectsData: Record<string, {name:string;location:string;price:string;type:string;status:string;possession:string;description:string;images:string[];amenities:string[];pricing:{type:string;price:string}[];map:string}> = {
+const projectsData: Record<string, { name: string; location: string; price: string; type: string; status: string; possession: string; description: string; images: string[]; amenities: string[]; pricing: { type: string; price: string }[]; map: string }> = {
   "sri-sai-residency": {
     name: "Sri Sai Residency", location: "Medchal, Hyderabad", price: "₹45L – ₹72L", type: "2 & 3 BHK Apartments", status: "Ongoing", possession: "Dec 2026",
     description: "Sri Sai Residency offers thoughtfully designed 2 & 3 BHK apartments in the heart of Medchal with excellent connectivity to ORR, Kompally, and major IT corridors.",
-    images: ["https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=900&q=80","https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80"],
-    amenities: ["Swimming Pool","Gym","Children's Play Area","24/7 Security","Clubhouse","Power Backup","Jogging Track","Landscaped Gardens","Indoor Games","Multipurpose Hall","CCTV Surveillance","Intercom Facility"],
+    images: [],
+    amenities: ["Swimming Pool", "Gym", "Children's Play Area", "24/7 Security", "Clubhouse", "Power Backup", "Jogging Track", "Landscaped Gardens", "Indoor Games", "Multipurpose Hall", "CCTV Surveillance", "Intercom Facility"],
     pricing: [{ type: "2 BHK – 1050 sqft", price: "₹45,00,000" }, { type: "2 BHK – 1200 sqft", price: "₹52,00,000" }, { type: "3 BHK – 1450 sqft", price: "₹65,00,000" }, { type: "3 BHK – 1650 sqft", price: "₹72,00,000" }],
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30436.0!2d78.4983!3d17.6299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8543a820475b%3A0x3e2e4e7a3e55cd46!2sMedchal%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000",
   },
   "lakshmi-gardens": {
     name: "Lakshmi Gardens", location: "Kompally, Hyderabad", price: "₹55L – ₹95L", type: "2, 3 & 4 BHK Apartments", status: "Ongoing", possession: "Mar 2027",
     description: "Lakshmi Gardens is a premium gated community in Kompally offering spacious apartments with world-class amenities and lush green surroundings.",
-    images: ["https://images.unsplash.com/photo-1515263487990-61b07816b324?w=900&q=80","https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=80","https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80"],
-    amenities: ["Clubhouse","Jogging Track","Power Backup","Landscaped Gardens","Indoor Games","Multipurpose Hall","Swimming Pool","Gym","Tennis Court","Yoga Deck","EV Charging","Rain Water Harvesting"],
+    images: ["https://images.unsplash.com/photo-1515263487990-61b07816b324?w=900&q=80", "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=80", "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80"],
+    amenities: ["Clubhouse", "Jogging Track", "Power Backup", "Landscaped Gardens", "Indoor Games", "Multipurpose Hall", "Swimming Pool", "Gym", "Tennis Court", "Yoga Deck", "EV Charging", "Rain Water Harvesting"],
     pricing: [{ type: "2 BHK – 1100 sqft", price: "₹55,00,000" }, { type: "3 BHK – 1500 sqft", price: "₹75,00,000" }, { type: "3 BHK – 1700 sqft", price: "₹85,00,000" }, { type: "4 BHK – 2000 sqft", price: "₹95,00,000" }],
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30436.0!2d78.4883!3d17.5399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8543a820475b%3A0x3e2e4e7a3e55cd46!2sKompally%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000",
   },
   "golden-heights": {
     name: "Golden Heights", location: "Secunderabad, Hyderabad", price: "₹38L – ₹65L", type: "2 & 3 BHK Apartments", status: "Completed", possession: "Ready to Move",
     description: "Golden Heights is a completed project in Secunderabad offering ready-to-move-in apartments with modern amenities and excellent connectivity.",
-    images: ["https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&q=80","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80","https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80"],
-    amenities: ["Parking","Gym","Community Hall","Rain Water Harvesting","CCTV","Intercom","Power Backup","Children's Play Area","Landscaped Gardens","24/7 Security","Fire Safety","Lift"],
+    images: ["https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&q=80", "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80", "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80"],
+    amenities: ["Parking", "Gym", "Community Hall", "Rain Water Harvesting", "CCTV", "Intercom", "Power Backup", "Children's Play Area", "Landscaped Gardens", "24/7 Security", "Fire Safety", "Lift"],
     pricing: [{ type: "2 BHK – 950 sqft", price: "₹38,00,000" }, { type: "2 BHK – 1100 sqft", price: "₹45,00,000" }, { type: "3 BHK – 1350 sqft", price: "₹55,00,000" }, { type: "3 BHK – 1550 sqft", price: "₹65,00,000" }],
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30436.0!2d78.5083!3d17.4399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8543a820475b%3A0x3e2e4e7a3e55cd46!2sSecunderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000",
   },
   "sunrise-towers": {
     name: "Sunrise Towers", location: "Medchal, Hyderabad", price: "₹60L – ₹1.1Cr", type: "3 & 4 BHK Apartments", status: "Upcoming", possession: "Jun 2028",
     description: "Sunrise Towers is our upcoming ultra-premium project featuring smart homes with cutting-edge technology, rooftop amenities, and sustainable living.",
-    images: ["https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80","https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=900&q=80","https://images.unsplash.com/photo-1515263487990-61b07816b324?w=900&q=80"],
-    amenities: ["Rooftop Pool","Co-working Space","EV Charging","Smart Home","Amphitheatre","Yoga Deck","Gym","Indoor Games","Party Hall","CCTV","24/7 Security","Vastu Compliant"],
+    images: ["https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80", "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=900&q=80", "https://images.unsplash.com/photo-1515263487990-61b07816b324?w=900&q=80"],
+    amenities: ["Rooftop Pool", "Co-working Space", "EV Charging", "Smart Home", "Amphitheatre", "Yoga Deck", "Gym", "Indoor Games", "Party Hall", "CCTV", "24/7 Security", "Vastu Compliant"],
     pricing: [{ type: "3 BHK – 1600 sqft", price: "₹60,00,000" }, { type: "3 BHK – 1850 sqft", price: "₹75,00,000" }, { type: "4 BHK – 2100 sqft", price: "₹92,00,000" }, { type: "4 BHK – 2400 sqft", price: "₹1,10,00,000" }],
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30436.0!2d78.4983!3d17.6299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8543a820475b%3A0x3e2e4e7a3e55cd46!2sMedchal%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000",
+  },
+  "g-2-independent-house": {
+    name: "G+2 Independent House", location: "Medchal, Hyderabad", price: "₹1.6Cr", type: "Commercial slot & 2 BHK Apartments", status: "Ongoing", possession: "December 2026",
+    description: "G+2 Independent House is our ongoing project featuring independent houses with modern amenities and excellent connectivity.",
+    images: ["/images/projects/G+2-independent-House/G+2(1).jpeg",
+      "/images/projects/G+2-independent-House/G+2(2).jpeg",
+      "/images/projects/G+2-independent-House/G+2(3).jpeg",
+      "/images/projects/G+2-independent-House/G+2(4).jpeg",
+      "/images/projects/G+2-independent-House/G+2(5).jpeg",
+      "/images/projects/G+2-independent-House/G+2(6).jpeg",
+      "/images/projects/G+2-independent-House/G+2(7).jpeg",
+      "/images/projects/G+2-independent-House/G+2(8).jpeg",
+      "/images/projects/G+2-independent-House/G+2(9).jpeg",
+      "/images/projects/G+2-independent-House/G+2(10).jpeg",
+      "/images/projects/G+2-independent-House/G+2(11).jpeg",
+      "/images/projects/G+2-independent-House/G+2(12).jpeg",
+      "/images/projects/G+2-independent-House/G+2(13).jpeg",
+      "/images/projects/G+2-independent-House/G+2(14).jpeg",
+      "/images/projects/G+2-independent-House/G+2(15).jpeg",
+    ],
+    amenities: ["Parking", "Rain Water Harvesting", "Children's Play Area", "Landscaped Gardens", "Jogging Track", "Tennis Court"],
+    pricing: [{ type: "G+2 independent house", price: "₹1,60,00,000" }],
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30436.0!2d78.5083!3d17.4399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8543a820475b%3A0x3e2e4e7a3e55cd46!2sSecunderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000",
   },
 };
 
 export default function ProjectDetail() {
   const params = useParams();
-  const slug = params.id as string;
+  const rawSlug = params.id as string;
+  const normalizeSlug = (value: string) => decodeURIComponent(value).replace(/\+/g, "-").toLowerCase();
+  const slug = normalizeSlug(rawSlug);
   const project = projectsData[slug];
   const [activeImg, setActiveImg] = useState(0);
   const [form, setForm] = useState({ name: "", phone: "", email: "" });
@@ -58,21 +83,32 @@ export default function ProjectDetail() {
       </div>
 
       {/* Image Gallery */}
-      <section className="relative h-[50vh] sm:h-[70vh] overflow-hidden">
-        <img src={project.images[activeImg]} alt={project.name} className="w-full h-full object-cover transition-all duration-500" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
-        <div className="absolute bottom-6 left-4 sm:left-8 right-4 sm:right-8 z-10">
+      <section className="relative bg-gray-100">
+        {/* Image renders at natural aspect ratio, no forced height */}
+        <img
+          src={project.images[activeImg]}
+          alt={project.name}
+          className="w-full block transition-all duration-500"
+          style={{ maxHeight: "85vh", objectFit: "contain", margin: "0 auto" }}
+        />
+        {/* Gradient overlay for text readability */}
+        <div className="absolute bottom-0 left-0 right-0 h-48 bg-gradient-to-t from-black/80 to-transparent pointer-events-none" />
+
+        {/* Title overlay */}
+        <div className="absolute bottom-20 sm:bottom-24 left-4 sm:left-8 z-10">
           <span className={`inline-block px-3 py-1 rounded-full text-xs font-bold text-white mb-3 ${project.status === "Ongoing" ? "bg-green-500" : project.status === "Completed" ? "bg-blue-500" : "bg-orange-500"}`}>{project.status}</span>
-          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white" style={{ fontFamily: "'Playfair Display', serif" }}>{project.name}</h1>
-          <p className="text-white/70 text-sm sm:text-base mt-1 flex items-center gap-1">
+          <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold text-white drop-shadow-lg" style={{ fontFamily: "'Playfair Display', serif" }}>{project.name}</h1>
+          <p className="text-white/80 text-sm sm:text-base mt-1 flex items-center gap-1 drop-shadow">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /></svg>
             {project.location}
           </p>
         </div>
-        <div className="absolute bottom-6 right-4 sm:right-8 z-10 flex gap-2">
+
+        {/* Thumbnails */}
+        <div className="absolute bottom-4 left-4 right-4 sm:right-8 z-10 flex gap-2 overflow-x-auto pr-2 no-scrollbar">
           {project.images.map((img: string, i: number) => (
-            <button key={i} onClick={() => setActiveImg(i)} className={`w-14 h-10 sm:w-20 sm:h-14 rounded-lg overflow-hidden border-2 transition ${activeImg === i ? "border-amber-400" : "border-white/30"}`}>
-              <img src={img} alt="" className="w-full h-full object-cover" />
+            <button key={i} onClick={() => setActiveImg(i)} className={`min-w-[3.5rem] w-14 h-10 sm:w-20 sm:h-14 rounded-lg overflow-hidden border-2 transition shadow-md ${activeImg === i ? "border-amber-400 scale-110" : "border-white/50 hover:border-white"}`}>
+              <img src={img} alt="" className="w-full h-full object-cover object-center" />
             </button>
           ))}
         </div>
@@ -125,7 +161,7 @@ export default function ProjectDetail() {
                     </tr>
                   </thead>
                   <tbody>
-                    {project.pricing.map((p: {type:string;price:string}, i: number) => (
+                    {project.pricing.map((p: { type: string; price: string }, i: number) => (
                       <tr key={i} className="border-b border-gray-100">
                         <td className="px-4 sm:px-6 py-3 sm:py-4 text-gray-700">{p.type}</td>
                         <td className="px-4 sm:px-6 py-3 sm:py-4 text-right font-bold text-amber-600">{p.price}</td>
