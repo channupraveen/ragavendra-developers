@@ -181,7 +181,7 @@ export default function Home() {
       <Section>
         <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 py-8 sm:py-12">
           <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
-            {[["12+", "Years Experience"], ["500+", "Happy Families"], ["15+", "Projects Delivered"], ["98%", "Client Satisfaction"]].map(([num, label]) => (
+            {[["20+", "Years Experience"], ["500+", "Happy Families"], ["15+", "Projects Delivered"], ["98%", "Client Satisfaction"]].map(([num, label]) => (
               <div key={label}>
                 <div className="text-2xl sm:text-4xl font-bold text-amber-400 mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>{num}</div>
                 <div className="text-white/60 text-xs sm:text-sm tracking-wide uppercase">{label}</div>
@@ -242,7 +242,7 @@ export default function Home() {
             <div className="relative">
               <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=700&q=80" alt="Luxury apartment" className="rounded-2xl shadow-2xl w-full" />
               <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-amber-500 text-white p-4 sm:p-6 rounded-xl shadow-xl">
-                <div className="text-2xl sm:text-3xl font-bold">12+</div>
+                <div className="text-2xl sm:text-3xl font-bold">20+</div>
                 <div className="text-xs sm:text-sm">Years</div>
               </div>
             </div>
@@ -250,7 +250,7 @@ export default function Home() {
               <span className="text-amber-500 text-xs sm:text-sm tracking-[0.2em] uppercase font-semibold">About Us</span>
               <h2 className="text-2xl sm:text-4xl font-bold mt-3 mb-4 sm:mb-6 text-gray-900" style={{ fontFamily: "'Playfair Display', serif" }}>Building Dreams,<br />Delivering Excellence</h2>
               <p className="text-gray-600 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
-                Ragavendra Developers is a trusted name in Hyderabad&apos;s real estate landscape. With over 12 years of experience, we have delivered 500+ homes with a focus on quality construction, timely delivery, and customer satisfaction.
+                Ragavendra Developers is a trusted name in Hyderabad&apos;s real estate landscape. With over 20 years of experience in the construction business, we have delivered 500+ homes with a focus on quality construction, timely delivery, and customer satisfaction.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6 sm:mb-8 text-sm sm:text-base">
                 Our projects in Medchal, Kompally, and Secunderabad offer premium living at affordable prices, with world-class amenities and excellent connectivity to IT hubs.
@@ -258,6 +258,39 @@ export default function Home() {
               <Link href="/about" className="inline-flex items-center gap-2 bg-gray-900 hover:bg-gray-800 text-white px-6 py-3 rounded-xl text-sm font-semibold transition">
                 Learn More <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
               </Link>
+            </div>
+          </div>
+        </section>
+      </Section>
+
+      {/* DIRECTOR / FOUNDER */}
+      <Section>
+        <section className="py-16 sm:py-24 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-10 sm:gap-16 items-center">
+              <div className="flex justify-center order-1 md:order-none">
+                <div className="relative">
+                  <img src="/person.png" alt="Mutyalu - Founder & Director" className="w-64 sm:w-72 md:w-80 rounded-2xl shadow-2xl object-cover aspect-[3/4]" />
+                  <div className="absolute -bottom-4 -right-4 sm:-bottom-5 sm:-right-5 bg-amber-500 text-white p-3 sm:p-4 rounded-xl shadow-xl">
+                    <div className="text-lg sm:text-xl font-bold">20+ Yrs</div>
+                    <div className="text-[10px] sm:text-xs text-white/80">Construction</div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <span className="text-amber-500 text-xs sm:text-sm tracking-[0.2em] uppercase font-semibold">Leadership</span>
+                <h2 className="text-2xl sm:text-4xl font-bold mt-3 mb-2 text-gray-900" style={{ fontFamily: "'Playfair Display', serif" }}>Mutyalu</h2>
+                <p className="text-amber-600 font-semibold text-sm sm:text-base mb-5">Founder &amp; Director, Shree Ragavendra Developers</p>
+                <p className="text-gray-600 leading-relaxed mb-4 text-sm sm:text-base">
+                  With over 20 years of hands-on experience in the construction business, Mutyalu founded Shree Ragavendra Developers with a clear vision &mdash; to build homes that stand the test of time while remaining accessible to every family.
+                </p>
+                <p className="text-gray-600 leading-relaxed mb-5 text-sm sm:text-base">
+                  From personally overseeing construction quality to ensuring on-time delivery, his commitment to excellence has been the driving force behind every project. Under his leadership, the company has delivered 15+ successful projects and earned the trust of 500+ families across Hyderabad.
+                </p>
+                <div className="bg-amber-50 border-l-4 border-amber-500 rounded-r-xl p-4">
+                  <p className="text-gray-700 italic text-sm sm:text-base" style={{ fontFamily: "'Playfair Display', serif" }}>&quot;Building Trust, Brick by Brick&quot;</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>

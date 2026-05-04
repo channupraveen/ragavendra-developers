@@ -27,7 +27,7 @@ export default function AboutPage() {
         <div className="grid md:grid-cols-2 gap-10 sm:gap-16 items-center">
           <div>
             <span className="text-amber-500 text-xs sm:text-sm tracking-[0.2em] uppercase font-semibold">Our Story</span>
-            <h2 className="text-2xl sm:text-4xl font-bold mt-3 mb-6 text-gray-900" style={{ fontFamily: "'Playfair Display', serif" }}>Crafting Premium Homes Since 2012</h2>
+            <h2 className="text-2xl sm:text-4xl font-bold mt-3 mb-6 text-gray-900" style={{ fontFamily: "'Playfair Display', serif" }}>Crafting Premium Homes With 20+ Years of Experience</h2>
             <p className="text-gray-600 leading-relaxed mb-4 text-sm sm:text-base">
               Ragavendra Developers was founded in 2012 with a simple mission — to build homes that families can be proud of. Starting from a single project in Medchal, we have grown into one of the most trusted real estate developers in the Hyderabad metropolitan area.
             </p>
@@ -52,7 +52,7 @@ export default function AboutPage() {
       <section className="bg-gray-900 py-12 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
           {[
-            { num: "12+", label: "Years of Experience" },
+            { num: "20+", label: "Years of Experience" },
             { num: "15+", label: "Projects Delivered" },
             { num: "500+", label: "Happy Families" },
             { num: "5L+", label: "Sq.ft Developed" },
@@ -62,6 +62,38 @@ export default function AboutPage() {
               <div className="text-white/60 text-xs sm:text-sm uppercase tracking-wide">{s.label}</div>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Director / Founder */}
+      <section className="max-w-7xl mx-auto px-4 py-16 sm:py-24">
+        <div className="grid md:grid-cols-2 gap-10 sm:gap-16 items-center">
+          <div className="relative flex justify-center">
+            <div className="relative">
+              <img src="/person.png" alt="Mutyalu - Director" className="w-72 sm:w-80 rounded-2xl shadow-2xl object-cover aspect-[3/4]" />
+              <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-amber-500 text-white p-4 sm:p-5 rounded-xl shadow-xl">
+                <div className="text-lg sm:text-xl font-bold">20+ Years</div>
+                <div className="text-xs sm:text-sm text-white/80">In Real Estate</div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <span className="text-amber-500 text-xs sm:text-sm tracking-[0.2em] uppercase font-semibold">Leadership</span>
+            <h2 className="text-2xl sm:text-4xl font-bold mt-3 mb-2 text-gray-900" style={{ fontFamily: "'Playfair Display', serif" }}>Mutyalu</h2>
+            <p className="text-amber-600 font-semibold text-sm sm:text-base mb-6">Founder &amp; Director, Shree Ragavendra Developers</p>
+            <p className="text-gray-600 leading-relaxed mb-4 text-sm sm:text-base">
+              With over 20 years of hands-on experience in the construction business, Mutyalu founded Shree Ragavendra Developers with a clear vision — to build homes that stand the test of time while remaining accessible to every family.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-4 text-sm sm:text-base">
+              From personally overseeing construction quality to ensuring on-time delivery, his commitment to excellence has been the driving force behind every project. Under his leadership, the company has delivered 15+ successful projects and earned the trust of 500+ families across Hyderabad.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-6 text-sm sm:text-base">
+              His philosophy is simple: treat every home as if you&apos;re building it for your own family. This principle has made Ragavendra Developers one of the most trusted names in Medchal and surrounding areas.
+            </p>
+            <div className="bg-amber-50 border-l-4 border-amber-500 rounded-r-xl p-4 sm:p-5">
+              <p className="text-gray-700 italic text-sm sm:text-base" style={{ fontFamily: "'Playfair Display', serif" }}>&quot;Building Trust, Brick by Brick&quot;</p>
+            </div>
+          </div>
         </div>
       </section>
 
