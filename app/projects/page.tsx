@@ -4,10 +4,11 @@ import Link from "next/link";
 
 const allProjects = [
   { id: "mrr-nilayam", name: "Malkaji Ratna Raghavendra Nilayam", location: "Medchal, Hyderabad", price: "₹45L – ₹72L", type: "2 & 3 BHK", status: "Completed", img: "/images/projects/MRR-Nilayam/mrr-nilayam(1).jpeg", amenities: ["Parking", "Children's Play Area", "24/7 Security", "Power Backup"] },
-  { id: "lakshmi-gardens", name: "Lakshmi Gardens", location: "Kompally, Hyderabad", price: "₹55L – ₹95L", type: "2, 3 & 4 BHK", status: "Ongoing", img: "https://images.unsplash.com/photo-1515263487990-61b07816b324?w=800&q=80", amenities: ["Clubhouse", "Jogging Track", "Power Backup", "Landscaped Gardens", "Indoor Games", "Multipurpose Hall"] },
-  { id: "golden-heights", name: "Golden Heights", location: "Secunderabad, Hyderabad", price: "₹38L – ₹65L", type: "2 & 3 BHK", status: "Completed", img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80", amenities: ["Parking", "Gym", "Community Hall", "Rain Water Harvesting", "CCTV", "Intercom"] },
-  { id: "sunrise-towers", name: "Sunrise Towers", location: "Medchal, Hyderabad", price: "₹60L – ₹1.1Cr", type: "3 & 4 BHK", status: "Upcoming", img: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=800&q=80", amenities: ["Rooftop Pool", "Co-working Space", "EV Charging", "Smart Home", "Amphitheatre", "Yoga Deck"] },
+  { id: "rv-arcade", name: "RV Arcade", location: "Medchal, Hyderabad", price: "₹45L – ₹72L", type: "2 & 3 BHK", status: "Completed", img: "/images/projects/RV arcade/img1.jpeg", amenities: ["Parking", "Children's Play Area", "24/7 Security", "Power Backup"] },
+  { id: "lakshmi-nilayam", name: "Lakshmi Nilayam", location: "Medchal, Hyderabad", price: "₹35L – ₹50L", type: "2 BHK", status: "Completed", img: "/images/projects/lakshminilyam/img1.jpeg", amenities: ["Parking", "Children's Play Area", "24/7 Security", "Power Backup"] },
+  { id: "my-home-duplex", name: "My Home Luxury Duplex", location: "KLR NJR Colony, Hyderabad", price: "₹1.8Cr – ₹2.5Cr", type: "Luxury Duplex", status: "Completed", img: "/images/projects/myhome/img1.jpeg", amenities: ["Fully Furnished", "Modular Kitchen", "Premium Flooring", "Parking"] },
   { id: "g-2-independent-house", name: "G+2 Independent House", location: "Medchal, Hyderabad", price: "₹1.6Cr", type: "Commercial slot & 2 BHK Apartments", status: "Ongoing", img: "/images/projects/G+2-independent-House/G+2(4).jpeg", amenities: ["Parking", "Rain Water Harvesting","Children's Play Area", "Landscaped Gardens", "Fire Safety"] },
+  { id: "sheesa-nilayam", name: "Sheesa Nilayam", location: "Medchal, Hyderabad", price: "₹2Cr", type: "G+2 Luxury – 1, 2 & 3 BHK", status: "Completed", img: "/images/projects/sheesainilayam/img1.png", amenities: ["Parking", "Premium Flooring", "Modular Kitchen", "24/7 Security"] },
 ];
 
 const tabs = ["All", "Ongoing", "Completed", "Upcoming"];

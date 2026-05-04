@@ -12,6 +12,30 @@ const projectsData: Record<string, {name:string;location:string;price:string;typ
     pricing: [{ type: "2 BHK – 1464 sqft", price: "₹60,00,000" }, { type: "3 BHK – 1768 sqft", price: "₹72,00,000" }],
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30436.0!2d78.4983!3d17.6299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8543a820475b%3A0x3e2e4e7a3e55cd46!2sMedchal%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000",
   },
+  "rv-arcade": {
+    name: "RV Arcade", location: "Medchal, Hyderabad", price: "₹45L – ₹72L", type: "2 & 3 BHK Apartments", status: "Completed", possession: "Ready to Move",
+    description: "RV Arcade is a premium completed residential project in the heart of Medchal offering thoughtfully designed 2 & 3 BHK apartments with modern amenities and excellent connectivity to ORR, Kompally, and major IT corridors.",
+    images: ["/images/projects/RV arcade/img1.jpeg","/images/projects/RV arcade/img2.jpeg"],
+    amenities: ["Parking","Children's Play Area","24/7 Security","Power Backup","CCTV Surveillance","Intercom Facility","Rain Water Harvesting","Landscaped Gardens"],
+    pricing: [{ type: "2 BHK – 1464 sqft", price: "₹60,00,000" }, { type: "3 BHK – 1768 sqft", price: "₹72,00,000" }],
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30436.0!2d78.4983!3d17.6299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8543a820475b%3A0x3e2e4e7a3e55cd46!2sMedchal%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000",
+  },
+  "lakshmi-nilayam": {
+    name: "Lakshmi Nilayam", location: "Medchal, Hyderabad", price: "₹35L – ₹50L", type: "2 BHK Apartments", status: "Completed", possession: "Ready to Move",
+    description: "Lakshmi Nilayam is a completed residential project in Medchal offering well-designed 2 BHK apartments with quality construction, modern amenities, and great connectivity to ORR and Kompally.",
+    images: ["/images/projects/lakshminilyam/img1.jpeg","/images/projects/lakshminilyam/img2.jpeg","/images/projects/lakshminilyam/img3.jpeg"],
+    amenities: ["Parking","Children's Play Area","24/7 Security","Power Backup","CCTV Surveillance","Intercom Facility","Rain Water Harvesting","Landscaped Gardens"],
+    pricing: [{ type: "2 BHK – 1050 sqft", price: "₹35,00,000" }, { type: "2 BHK – 1200 sqft", price: "₹42,00,000" }, { type: "2 BHK – 1350 sqft", price: "₹50,00,000" }],
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30436.0!2d78.4983!3d17.6299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8543a820475b%3A0x3e2e4e7a3e55cd46!2sMedchal%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000",
+  },
+  "my-home-duplex": {
+    name: "My Home Luxury Duplex", location: "KLR NJR Colony, Hyderabad", price: "₹1.8Cr – ₹2.5Cr", type: "Luxury Duplex House", status: "Completed", possession: "Ready to Move",
+    description: "My Home Luxury Duplex is a premium fully furnished duplex house in the prestigious KLR NJR Colony. Featuring spacious living areas, modern interiors, and top-of-the-line fittings across two elegant floors.",
+    images: ["/images/projects/myhome/img1.jpeg"],
+    amenities: ["Fully Furnished","Modular Kitchen","Premium Flooring","Parking","24/7 Security","Power Backup","CCTV Surveillance","Landscaped Gardens","Rain Water Harvesting","Vastu Compliant"],
+    pricing: [{ type: "Duplex – 2800 sqft", price: "₹1,80,00,000" }, { type: "Duplex – 3200 sqft", price: "₹2,10,00,000" }, { type: "Duplex – 3600 sqft", price: "₹2,50,00,000" }],
+    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30436.0!2d78.4983!3d17.6299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8543a820475b%3A0x3e2e4e7a3e55cd46!2sMedchal%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000",
+  },
   "g-2-independent-house": {
     name: "G+2 Independent House", location: "Medchal, Hyderabad", price: "₹1.6Cr", type: "Commercial slot & 2 BHK Apartments", status: "Ongoing", possession: "Jun 2026",
     description: "A premium G+2 independent house in Medchal featuring a commercial slot on the ground floor and spacious 2 BHK apartments on upper floors.",
@@ -20,28 +44,12 @@ const projectsData: Record<string, {name:string;location:string;price:string;typ
     pricing: [{ type: "G+2 Independent House", price: "₹1,60,00,000" }],
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30436.0!2d78.4983!3d17.6299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8543a820475b%3A0x3e2e4e7a3e55cd46!2sMedchal%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000",
   },
-  "lakshmi-gardens": {
-    name: "Lakshmi Gardens", location: "Kompally, Hyderabad", price: "₹55L – ₹95L", type: "2, 3 & 4 BHK Apartments", status: "Ongoing", possession: "Mar 2027",
-    description: "Lakshmi Gardens is a premium gated community in Kompally offering spacious apartments with world-class amenities and lush green surroundings.",
-    images: ["https://images.unsplash.com/photo-1515263487990-61b07816b324?w=900&q=80","https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=900&q=80","https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80"],
-    amenities: ["Clubhouse","Jogging Track","Power Backup","Landscaped Gardens","Indoor Games","Multipurpose Hall","Swimming Pool","Gym","Tennis Court","Yoga Deck","EV Charging","Rain Water Harvesting"],
-    pricing: [{ type: "2 BHK – 1100 sqft", price: "₹55,00,000" },{ type: "3 BHK – 1500 sqft", price: "₹75,00,000" },{ type: "3 BHK – 1700 sqft", price: "₹85,00,000" },{ type: "4 BHK – 2000 sqft", price: "₹95,00,000" }],
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30436.0!2d78.4883!3d17.5399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8543a820475b%3A0x3e2e4e7a3e55cd46!2sKompally%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000",
-  },
-  "golden-heights": {
-    name: "Golden Heights", location: "Secunderabad, Hyderabad", price: "₹38L – ₹65L", type: "2 & 3 BHK Apartments", status: "Completed", possession: "Ready to Move",
-    description: "Golden Heights is a completed project in Secunderabad offering ready-to-move-in apartments with modern amenities and excellent connectivity.",
-    images: ["https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&q=80","https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=900&q=80","https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80"],
-    amenities: ["Parking","Gym","Community Hall","Rain Water Harvesting","CCTV","Intercom","Power Backup","Children's Play Area","Landscaped Gardens","24/7 Security","Fire Safety","Lift"],
-    pricing: [{ type: "2 BHK – 950 sqft", price: "₹38,00,000" },{ type: "2 BHK – 1100 sqft", price: "₹45,00,000" },{ type: "3 BHK – 1350 sqft", price: "₹55,00,000" },{ type: "3 BHK – 1550 sqft", price: "₹65,00,000" }],
-    map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30436.0!2d78.5083!3d17.4399!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8543a820475b%3A0x3e2e4e7a3e55cd46!2sSecunderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000",
-  },
-  "sunrise-towers": {
-    name: "Sunrise Towers", location: "Medchal, Hyderabad", price: "₹60L – ₹1.1Cr", type: "3 & 4 BHK Apartments", status: "Upcoming", possession: "Jun 2028",
-    description: "Sunrise Towers is our upcoming ultra-premium project featuring smart homes with cutting-edge technology, rooftop amenities, and sustainable living.",
-    images: ["https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80","https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=900&q=80","https://images.unsplash.com/photo-1515263487990-61b07816b324?w=900&q=80"],
-    amenities: ["Rooftop Pool","Co-working Space","EV Charging","Smart Home","Amphitheatre","Yoga Deck","Gym","Indoor Games","Party Hall","CCTV","24/7 Security","Vastu Compliant"],
-    pricing: [{ type: "3 BHK – 1600 sqft", price: "₹60,00,000" },{ type: "3 BHK – 1850 sqft", price: "₹75,00,000" },{ type: "4 BHK – 2100 sqft", price: "₹92,00,000" },{ type: "4 BHK – 2400 sqft", price: "₹1,10,00,000" }],
+  "sheesa-nilayam": {
+    name: "Sheesa Nilayam", location: "Medchal, Hyderabad", price: "₹2Cr", type: "G+2 Luxury – 1, 2 & 3 BHK", status: "Completed", possession: "Ready to Move",
+    description: "Sheesa Nilayam is a luxury G+2 independent property in Medchal featuring spacious 1 BHK, 2 BHK, and 3 BHK units across three elegant floors. The entire project is valued at ₹2 Crores with premium construction and modern finishes.",
+    images: ["/images/projects/sheesainilayam/img1.png","/images/projects/sheesainilayam/img2.png"],
+    amenities: ["Parking","Premium Flooring","Modular Kitchen","24/7 Security","Power Backup","CCTV Surveillance","Rain Water Harvesting","Vastu Compliant","Landscaped Gardens","Intercom Facility"],
+    pricing: [{ type: "1 BHK – 650 sqft", price: "₹28,00,000" }, { type: "2 BHK – 1100 sqft", price: "₹52,00,000" }, { type: "3 BHK – 1650 sqft", price: "₹78,00,000" }],
     map: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30436.0!2d78.4983!3d17.6299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8543a820475b%3A0x3e2e4e7a3e55cd46!2sMedchal%2C%20Telangana!5e0!3m2!1sen!2sin!4v1700000000000",
   },
 };
@@ -76,7 +84,7 @@ export default function ProjectDetail() {
             }
           }}
         >
-          <img src={project.images[activeImg]} alt={project.name} className="w-full h-full object-cover transition-all duration-500" />
+          <img src={project.images[activeImg]} alt={project.name} className="w-full h-full object-cover md:object-contain transition-all duration-500" />
         </div>
         <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-black/80 to-transparent pointer-events-none" />
         <div className="absolute bottom-6 left-4 sm:left-8 z-10">
