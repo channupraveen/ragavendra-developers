@@ -72,7 +72,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 text-sm">Phone</h4>
-                    <a href="tel:+919876543210" className="text-amber-600 hover:underline text-sm mt-0.5 block">+91 9849013465</a>
+                    <a href="tel:+919849013465" className="text-amber-600 hover:underline text-sm mt-0.5 block">+91 9849013465</a>
                   </div>
                 </div>
                 <div className="flex gap-4">
