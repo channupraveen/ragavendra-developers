@@ -232,6 +232,13 @@ export default function Home() {
               </Section>
             ))}
           </div>
+          <Section delay={900}>
+            <div className="text-center mt-10 sm:mt-14">
+              <Link href="/projects" className="inline-flex items-center gap-2 bg-amber-500 hover:bg-amber-600 text-white px-8 py-3.5 rounded-xl text-sm sm:text-base font-bold transition shadow-xl shadow-amber-500/25 hover:shadow-amber-500/40 hover:-translate-y-0.5">
+                View All Projects <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" /></svg>
+              </Link>
+            </div>
+          </Section>
         </div>
       </section>
 
